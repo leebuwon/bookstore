@@ -6,12 +6,11 @@ public class Main {
 
     private static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        bookstore bookstore = new bookstore();
-
+        Bookstore Bookstore = new Bookstore();
 
         while(true) {
-            bookstore.pagescreen();
-            bookstore.runcommand(sc);
+            Bookstore.pagescreen();
+            Bookstore.runcommand(sc);
 
             }
         }

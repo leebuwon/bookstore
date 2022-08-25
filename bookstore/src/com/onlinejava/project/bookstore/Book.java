@@ -1,12 +1,12 @@
 package com.onlinejava.project.bookstore;
 
-public class book {
+public class Book {
     private String title;
     private String writer;
     private int price;
     private String loction;
 
-    public book(String title, String Writer, int price, String loction) {
+    public Book(String title, String Writer, int price, String loction) {
 
         this.title = title;
         writer = Writer;
@@ -44,5 +44,15 @@ public class book {
 
     public void setLoction(String loction) {
         this.loction = loction;
+    }
+
+    @Override
+    public String toString() {
+        return "book{" +
+                "title='" + title + '\'' +
+                ", writer='" + writer + '\'' +
+                ", price=" + price +
+                ", loction='" + loction + '\'' +
+                '}';
     }
 }
