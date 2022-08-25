@@ -1,9 +1,16 @@
 package com.onlinejava.project.bookstore;
-
 import java.sql.SQLOutput;
+import java.util.List;
+import java.util.Scanner;
 
 public class bookstore {
+
     public void pagescreen() {
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
         System.out.println("=================================================");
         System.out.println("=                                               =");
         System.out.println("=                                               =");
@@ -18,8 +25,21 @@ public class bookstore {
         System.out.println("=                                               =");
         System.out.println("=================================================");
         System.out.println("Type the number of the command you want to run: ");
-        System.out.println("search keyword: ");
-
 
     }
+    public void runcommand(Scanner sc) {
+        int input = sc.nextInt();
+        switch (input) {
+            case 1:
+                System.out.println("list");
+                break;
+            case 0:
+                System.exit(0);
+                break;
+            default:
+                System.out.println("Error : known" + input);
+        }
+    }
+
+
 }
