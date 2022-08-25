@@ -31,7 +31,7 @@ public class Bookstore{
         int input = sc.nextInt();
         switch (input) {
             case 1:
-                System.out.println("list");
+                printBookList();
                 break;
             case 0:
                 System.exit(0);
@@ -41,5 +41,16 @@ public class Bookstore{
         }
     }
 
+    private void printBookList() {
+        bookList.forEach( (book) -> {
+            System.out.println(book);
+        });
+    }
+    private List<Book> bookList() {
+        return List.of(
+                new Book("홍길동전", "홍선", 15000, "2층 2번"),
+                new Book("토끼전", "규선", 25000, "1층 1번")
+        );
+    }
 
 }
