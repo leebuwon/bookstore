@@ -1,35 +1,35 @@
 package com.onlinejava.project.bookstore;
 
 public class Book {
-    private String title;
+    private String Title;
     private String Writer;
-    private int price;
-    private String loction;
+    private int Price;
+    private String Location;
 
-    public Book(String title, String Writer, int price, String loction) {
+    public Book(String Title, String Writer, int Price, String Location) {
 
-        this.title = title;
+        this.Title = Title;
         this.Writer = Writer;
-        this.price = price;
-        this.loction = loction;
+        this.Price = Price;
+        this.Location = Location;
     }
 
     @Override
     public String toString() {
         return "Book{" +
-                "title='" + title + '\'' +
+                "Title='" + Title + '\'' +
                 ", writer='" + Writer + '\'' +
-                ", price=" + price +
-                ", loction='" + loction + '\'' +
+                ", Price=" + Price +
+                ", Location='" + Location + '\'' +
                 '}';
     }
 
     public String getTitle() {
-        return title;
+        return Title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setTitle(String Title) {
+        this.Title = Title;
     }
 
     public String getWriter() {
@@ -41,19 +41,19 @@ public class Book {
     }
 
     public int getPrice() {
-        return price;
+        return Price;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public void setPrice(int Price) {
+        this.Price = Price;
     }
 
-    public String getLoction() {
-        return loction;
+    public String getLocation() {
+        return Location;
     }
 
-    public void setLoction(String loction) {
-        this.loction = loction;
+    public void setLocation(String Location) {
+        this.Location = Location;
     }
 
 
