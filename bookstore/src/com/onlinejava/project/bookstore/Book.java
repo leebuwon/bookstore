@@ -2,16 +2,26 @@ package com.onlinejava.project.bookstore;
 
 public class Book {
     private String title;
-    private String writer;
+    private String Writer;
     private int price;
     private String loction;
 
     public Book(String title, String Writer, int price, String loction) {
 
         this.title = title;
-        writer = Writer;
+        this.Writer = Writer;
         this.price = price;
         this.loction = loction;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", writer='" + Writer + '\'' +
+                ", price=" + price +
+                ", loction='" + loction + '\'' +
+                '}';
     }
 
     public String getTitle() {
@@ -23,11 +33,11 @@ public class Book {
     }
 
     public String getWriter() {
-        return writer;
+        return Writer;
     }
 
     public void setWriter(String writer) {
-        this.writer = writer;
+        this.Writer = writer;
     }
 
     public int getPrice() {
@@ -46,13 +56,5 @@ public class Book {
         this.loction = loction;
     }
 
-    @Override
-    public String toString() {
-        return "book{" +
-                "title='" + title + '\'' +
-                ", writer='" + writer + '\'' +
-                ", price=" + price +
-                ", loction='" + loction + '\'' +
-                '}';
-    }
+
 }

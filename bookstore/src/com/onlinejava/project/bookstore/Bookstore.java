@@ -1,5 +1,6 @@
 package com.onlinejava.project.bookstore;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
@@ -42,15 +43,19 @@ public class Bookstore{
     }
 
     private void printBookList() {
-        bookList.forEach( (book) -> {
+        getbookList().forEach( (book) -> {
             System.out.println(book);
         });
     }
-    private List<Book> bookList() {
+
+    private List<Book> getbookList() {
         return List.of(
-                new Book("홍길동전", "홍선", 15000, "2층 2번"),
-                new Book("토끼전", "규선", 25000, "1층 1번")
+                new Book("홍길동전", "효선", 15000, "2층 15번"),
+                new Book("토끼전", "지선", 20000, "1층 5번"),
+                new Book("흥부전", "규선", 17500, "1층 3번"),
+                new Book("JAVA의 정석", "남궁성", 22500, "1층 7번")
         );
     }
+
 
 }
