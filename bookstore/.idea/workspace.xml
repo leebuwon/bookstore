@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62c2dbff-7eb5-456e-ba0e-71cc7d0a1e5d" name="Changes" comment="Update Commit">
+    <list default="true" id="62c2dbff-7eb5-456e-ba0e-71cc7d0a1e5d" name="Changes" comment="delete Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bookstore/com/onlinejava/project/bookstore/bookstore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bookstore/com/onlinejava/project/bookstore/bookstore.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/onlinejava/project/bookstore/Bookstore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/onlinejava/project/bookstore/Bookstore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661595825361</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="delete Commit">
+      <created>1661681665592</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1661681665592</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -147,6 +155,22 @@
     <MESSAGE value="Four Commit" />
     <MESSAGE value="FIVE Commit" />
     <MESSAGE value="Update Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Commit" />
+    <MESSAGE value="delete Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete Commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/onlinejava/project/bookstore/Main.java</url>
+          <line>7</line>
+          <properties class="com.onlinejava.project.bookstore.Main" method="main">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,12 +1,14 @@
 package com.onlinejava.project.bookstore;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Bookstore{
+public class Bookstore {
 
     private List<Book> bookList;
+
     {
         bookList = new ArrayList<>();
         bookList.add(new Book("홍길동전", "효선", 15000, "2층 15번"));
@@ -39,6 +41,7 @@ public class Bookstore{
         System.out.print("Type the number of the command you want to run: ");
 
     }
+
     public void runcommand(Scanner sc) {
         String input = sc.nextLine().trim();
         switch (input) {
@@ -46,7 +49,9 @@ public class Bookstore{
                 printBookList();
                 break;
             case "2":
-                searchBook();
+                System.out.printf("Search Title: ");
+                String searchTitle = sc.nextLine().trim();
+                printBookList(searchBook(searchTitle));
                 break;
             case "3":
                 System.out.printf("Type Title: ");
@@ -73,9 +78,29 @@ public class Bookstore{
                 System.exit(0);
                 break;
             default:
-                System.out.println("Error : known" + input);
+                System.out.println("Error : known " + input);
         }
     }
+
+    private void printBookList(Object searchBook) {
+        //이건 잘모르겠습니다.
+    }
+
+    private List<Book> searchBook(String searchTitle) {
+        List<Book> list = getbookList();
+        for (int i = 0; i < list.size(); i++){
+            if(list.get(i).getTitle().contains(searchTitle)){
+                System.out.println("존재합니다.");
+                break;
+            }else{
+                System.out.println("존재하지않습니다.");
+                break;
+            }
+        }
+
+        return bookList;
+    }
+
 
     private void deletingBook(String deletingBook) {
         List<Book> list = getbookList();
@@ -94,11 +119,6 @@ public class Bookstore{
         getbookList().add(newBook);
     }
 
-
-    private void searchBook() {  // 마지막에 구현
-
-    }
-
     private void printBookList() {
         getbookList().forEach( (book) -> {
             System.out.println(book);
@@ -108,6 +128,4 @@ public class Bookstore{
     private List<Book> getbookList() {
         return bookList;
     }
-
-
 }
