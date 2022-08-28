@@ -64,12 +64,29 @@ public class Bookstore{
                 Book newBook = new Book(Title, Writer, Price, Location);
                 updateBook(newBook);
                 break;
-
+            case "4":
+                System.out.printf("delete Title: ");
+                String deletingBook = sc.nextLine().trim();
+                deletingBook(deletingBook);
+                break;
             case "0":
                 System.exit(0);
                 break;
             default:
                 System.out.println("Error : known" + input);
+        }
+    }
+
+    private void deletingBook(String deletingBook) {
+        List<Book> list = getbookList();
+        for(int i = 0; i < list.size(); i++){
+            if(list.get(i).getTitle().equals(deletingBook)){
+                list.remove(i);
+                return;
+            } else{
+                System.out.println("No matching book found.");
+                return;
+            }
         }
     }
 
