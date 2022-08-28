@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="62c2dbff-7eb5-456e-ba0e-71cc7d0a1e5d" name="Changes" comment="search Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bookstore/com/onlinejava/project/bookstore/bookstore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bookstore/com/onlinejava/project/bookstore/bookstore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bookstore/com/onlinejava/project/bookstore/bookstore.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/onlinejava/project/bookstore/Bookstore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/onlinejava/project/bookstore/Bookstore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -155,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661691858014</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="search Commit">
+      <created>1661692120543</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1661692120543</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

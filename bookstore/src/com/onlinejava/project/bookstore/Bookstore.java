@@ -90,7 +90,7 @@ public class Bookstore {
         List<Book> list = getbookList();
         for (int i = 0; i < list.size(); i++){
             if(list.get(i).getTitle().contains(searchTitle)){
-                System.out.println("존재합니다.");
+                System.out.println(searchTitle + " 책이 존재합니다.");
                 break;
             }
         }
