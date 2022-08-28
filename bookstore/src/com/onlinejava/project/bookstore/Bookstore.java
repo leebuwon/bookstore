@@ -86,15 +86,11 @@ public class Bookstore {
         //이건 잘모르겠습니다.
     }
 
-    private List<Book> searchBook(String searchTitle) {
+    private List<Book> searchBook(String searchTitle) {         // error가 있음 (홍길동전만 존재한다고 나옴)
         List<Book> list = getbookList();
         for (int i = 0; i < list.size(); i++){
             if(list.get(i).getTitle().contains(searchTitle)){
                 System.out.println("존재합니다.");
-                break;
-            }else{
-                System.out.println("존재하지않습니다.");
-                break;
             }
         }
 
