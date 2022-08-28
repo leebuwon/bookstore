@@ -30,7 +30,7 @@ public class Bookstore {
         System.out.println("=           |    Welcome bookstore   |          =");
         System.out.println("=           |                        |          =");
         System.out.println("=           |    1. Print book list  |          =");
-        System.out.println("=           |    2. Book Search      |          ="); // 마지막에 구현
+        System.out.println("=           |    2. Book Search      |          =");
         System.out.println("=           |    3. Add new book     |          =");
         System.out.println("=           |    4. Delete a book    |          =");
         System.out.println("=           |    0. Quit             |          =");
@@ -104,6 +104,7 @@ public class Bookstore {
         for(int i = 0; i < list.size(); i++){
             if(list.get(i).getTitle().equals(deletingBook)){
                 list.remove(i);
+                System.out.println("Delete success");
                 return;
             } else{
                 System.out.println("No matching book found.");
