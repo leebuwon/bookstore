@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="62c2dbff-7eb5-456e-ba0e-71cc7d0a1e5d" name="Changes" comment="search Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/onlinejava/project/bookstore/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/onlinejava/project/bookstore/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/onlinejava/project/bookstore/Bookstore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/onlinejava/project/bookstore/Bookstore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +23,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -64,6 +70,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -168,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661692317914</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="search Commit">
+      <created>1661692682233</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1661692682233</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -192,20 +207,5 @@
     <MESSAGE value="delete Commit" />
     <MESSAGE value="search Commit" />
     <option name="LAST_COMMIT_MESSAGE" value="search Commit" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/com/onlinejava/project/bookstore/Main.java</url>
-          <line>7</line>
-          <properties class="com.onlinejava.project.bookstore.Main" method="main">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

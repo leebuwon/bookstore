@@ -1,6 +1,5 @@
 package com.onlinejava.project.bookstore;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -11,10 +10,10 @@ public class Bookstore {
 
     {
         bookList = new ArrayList<>();
-        bookList.add(new Book("홍길동전", "효선", 15000, "2층 15번"));
-        bookList.add(new Book("토끼전", "지선", 20000, "1층 5번"));
-        bookList.add(new Book("흥부전", "규선", 17500, "1층 3번"));
-        bookList.add(new Book("JAVA의 정석", "남궁성", 22500, "1층 7번"));
+        bookList.add(new Book("홍길동전", "효선", 15000, "2층 15번" ));
+        bookList.add(new Book("토끼전", "지선", 20000, "1층 5번" ));
+        bookList.add(new Book("흥부전", "규선", 17500, "1층 3번" ));
+        bookList.add(new Book("JAVA의 정석", "남궁성", 22500, "1층 7번" ));
     }
 
     public void pagescreen() {
@@ -23,21 +22,24 @@ public class Bookstore {
         System.out.println();
         System.out.println();
         System.out.println();
-        System.out.println("=================================================");
-        System.out.println("=                                               =");
-        System.out.println("=                                               =");
-        System.out.println("=           --------------------------          =");
-        System.out.println("=           |    Welcome bookstore   |          =");
-        System.out.println("=           |                        |          =");
-        System.out.println("=           |    1. Print book list  |          =");
-        System.out.println("=           |    2. Book Search      |          =");
-        System.out.println("=           |    3. Add new book     |          =");
-        System.out.println("=           |    4. Delete a book    |          =");
-        System.out.println("=           |    0. Quit             |          =");
-        System.out.println("=           --------------------------          =");
-        System.out.println("=                                               =");
-        System.out.println("=                                               =");
-        System.out.println("=================================================");
+        System.out.println("=====================================================");
+        System.out.println("=                                                   =");
+        System.out.println("=                                                   =");
+        System.out.println("=           ------------------------------          =");
+        System.out.println("=           |    Welcome bookstore       |          =");
+        System.out.println("=           |                            |          =");
+        System.out.println("=           |    1. Print book list      |          =");
+        System.out.println("=           |    2. Book Search          |          =");
+        System.out.println("=           |    3. Add new book         |          =");
+        System.out.println("=           |    4. Delete a book        |          =");
+        System.out.println("=           |    5. Buy a book           |          =");
+        System.out.println("=           |    6. Print purchase list  |          =");
+        System.out.println("=           |    7. Add book stock       |          =");
+        System.out.println("=           |    0. Quit                 |          =");
+        System.out.println("=           ------------------------------          =");
+        System.out.println("=                                                   =");
+        System.out.println("=                                                   =");
+        System.out.println("=====================================================");
         System.out.print("Type the number of the command you want to run: ");
 
     }
@@ -74,12 +76,34 @@ public class Bookstore {
                 String deletingBook = sc.nextLine().trim();
                 deletingBook(deletingBook);
                 break;
+            case "5":
+                System.out.printf("Type title: ");
+                String purchaseBook = sc.nextLine().trim();
+
+                System.out.printf("Type customer: ");
+                String buyCustomer = sc.nextLine().trim();
+                buyBook(purchaseBook, buyCustomer);
+                break;
+            case "6":
+                break;
+
+
+            case"7":
+                break;
+
             case "0":
                 System.exit(0);
                 break;
             default:
                 System.out.println("Error : known " + input);
         }
+    }
+
+    private void buyBook(String purchaseBook, String buyCustomer) { // --- 내일부터 다시
+        getbookList().stream()
+                .filter(book -> book.getTitle().equals(purchaseBook))
+                .forEach(book -> book.setStock(book.getStock() - 1 ));
+
     }
 
     private void printBookList(Object searchBook) {
