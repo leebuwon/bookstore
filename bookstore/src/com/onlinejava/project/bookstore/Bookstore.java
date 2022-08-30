@@ -3,6 +3,7 @@ package com.onlinejava.project.bookstore;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Bookstore {
 
@@ -108,10 +109,16 @@ public class Bookstore {
     }
 
     private void buyBook(String purchaseBook, String buyCustomer) {
+//        List<Book> list = getbookList();
+//        for(int i = 0; i < list.size(); i++){                           //아래가 함수형 프로그램으로 변환한 것
+//            if(list.get(i).getTitle().equals(purchaseBook)){
+//                list.get(i).setStock(list.get(i).getStock() - 1);
+//            }                                 // 음수가 나오지 않게 하기!
+//        }
         getbookList().stream()
                 .filter(book -> book.getTitle().equals(purchaseBook))
                 .filter(book -> book.getStock() > 0)
-                .forEach(book -> book.setStock(book.getStock() - 1 ));
+                .forEach(book -> book.setStock(book.getStock() - 1));
         Purchase purchase = new Purchase(purchaseBook, buyCustomer, 1);
         getPurchaseList().add(purchase);
     }
