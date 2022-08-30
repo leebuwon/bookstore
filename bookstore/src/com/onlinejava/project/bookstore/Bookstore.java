@@ -7,8 +7,10 @@ import java.util.Scanner;
 public class Bookstore {
 
     private List<Book> bookList;
+    private List<Purchase> purchaseList;
 
     {
+        purchaseList = new ArrayList<>();
         bookList = new ArrayList<>();
         bookList.add(new Book("홍길동전", "효선", 15000, "2층 15번" ));
         bookList.add(new Book("토끼전", "지선", 20000, "1층 5번" ));
@@ -85,6 +87,7 @@ public class Bookstore {
                 buyBook(purchaseBook, buyCustomer);
                 break;
             case "6":
+                printPurchaseList();
                 break;
 
 
@@ -99,11 +102,22 @@ public class Bookstore {
         }
     }
 
-    private void buyBook(String purchaseBook, String buyCustomer) { // --- 내일부터 다시
+    private void printPurchaseList() {
+        getPurchaseList().stream()
+                .forEach(System.out::println);
+    }
+
+    private void buyBook(String purchaseBook, String buyCustomer) {
         getbookList().stream()
                 .filter(book -> book.getTitle().equals(purchaseBook))
+                .filter(book -> book.getStock() > 0)
                 .forEach(book -> book.setStock(book.getStock() - 1 ));
+        Purchase purchase = new Purchase(purchaseBook, buyCustomer, 1);
+        getPurchaseList().add(purchase);
+    }
 
+    private List<Purchase> getPurchaseList() {
+        return this.purchaseList;
     }
 
     private void printBookList(Object searchBook) {
@@ -118,7 +132,6 @@ public class Bookstore {
                 break;
             }
         }
-
         return bookList;
     }
 
