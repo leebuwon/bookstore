@@ -6,23 +6,38 @@ public class Book {
     private int Price;
     private String Location;
 
-    public Book(String Title, String Writer, int Price, String Location) {
+    private int Stock;
 
-        this.Title = Title;
-        this.Writer = Writer;
-        this.Price = Price;
-        this.Location = Location;
+    public int getStock() {
+        return Stock;
+    }
+
+    public void setStock(int stock) {
+        Stock = stock;
+    }
+    public Book(String Title, String Writer, int Price, String Location) {
+        this(Title, Writer, Price, Location, 10);
     }
 
     @Override
     public String toString() {
         return "Book{" +
                 "Title='" + Title + '\'' +
-                ", writer='" + Writer + '\'' +
+                ", Writer='" + Writer + '\'' +
                 ", Price=" + Price +
                 ", Location='" + Location + '\'' +
+                ", Stock=" + Stock +
                 '}';
     }
+
+    public Book(String Title, String Writer, int Price, String Location, int Stock) {
+        this.Title = Title;
+        this.Writer = Writer;
+        this.Price = Price;
+        this.Location = Location;
+        this.Stock = Stock;
+    }
+
 
     public String getTitle() {
         return Title;
@@ -55,6 +70,7 @@ public class Book {
     public void setLocation(String Location) {
         this.Location = Location;
     }
+
 
 
 }
