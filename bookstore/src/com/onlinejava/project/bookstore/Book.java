@@ -15,8 +15,12 @@ public class Book {
     public void setStock(int stock) {
         Stock = stock;
     }
+
+    public void setStock(boolean stock) {
+    }
+
     public Book(String Title, String Writer, int Price, String Location) {
-        this(Title, Writer, Price, Location, 10);
+        this(Title, Writer, Price, Location, 1);
     }
 
     @Override

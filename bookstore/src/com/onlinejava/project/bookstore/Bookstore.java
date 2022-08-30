@@ -3,12 +3,15 @@ package com.onlinejava.project.bookstore;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Bookstore {
 
     private List<Book> bookList;
+    private List<Purchase> purchaseList;
 
     {
+        purchaseList = new ArrayList<>();
         bookList = new ArrayList<>();
         bookList.add(new Book("홍길동전", "효선", 15000, "2층 15번" ));
         bookList.add(new Book("토끼전", "지선", 20000, "1층 5번" ));
@@ -85,6 +88,7 @@ public class Bookstore {
                 buyBook(purchaseBook, buyCustomer);
                 break;
             case "6":
+                printPurchaseList();
                 break;
 
 
@@ -99,11 +103,28 @@ public class Bookstore {
         }
     }
 
-    private void buyBook(String purchaseBook, String buyCustomer) { // --- 내일부터 다시
+    private void printPurchaseList() {
+        getPurchaseList().stream()
+                .forEach(System.out::println);
+    }
+
+    private void buyBook(String purchaseBook, String buyCustomer) {
+//        List<Book> list = getbookList();
+//        for(int i = 0; i < list.size(); i++){                           //아래가 함수형 프로그램으로 변환한 것
+//            if(list.get(i).getTitle().equals(purchaseBook)){
+//                list.get(i).setStock(list.get(i).getStock() - 1);
+//            }                                 // 음수가 나오지 않게 하기!
+//        }
         getbookList().stream()
                 .filter(book -> book.getTitle().equals(purchaseBook))
-                .forEach(book -> book.setStock(book.getStock() - 1 ));
+                .filter(book -> book.getStock() > 0)
+                .forEach(book -> book.setStock(book.getStock() - 1));
+        Purchase purchase = new Purchase(purchaseBook, buyCustomer, 1);
+        getPurchaseList().add(purchase);
+    }
 
+    private List<Purchase> getPurchaseList() {
+        return this.purchaseList;
     }
 
     private void printBookList(Object searchBook) {
@@ -118,7 +139,6 @@ public class Bookstore {
                 break;
             }
         }
-
         return bookList;
     }
 
