@@ -90,8 +90,6 @@ public class Bookstore {
             case "6":
                 printPurchaseList();
                 break;
-
-
             case"7":
                 break;
 
