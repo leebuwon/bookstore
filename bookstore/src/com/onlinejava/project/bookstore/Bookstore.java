@@ -18,7 +18,7 @@ public class Bookstore {
 
         try {FileInputStream fis = new FileInputStream("booklist.dat");
             InputStreamReader isr = new InputStreamReader(fis);
-            BufferedReader reader = new BufferedReader(isr);
+            BufferedReader reader = new BufferedReader(isr);        // BufferedReader는 scanner보다 성능상으로 좋기 떄문에 잘 사용하는 것이 좋다
 
             reader.lines()
                     .forEach(line -> {
