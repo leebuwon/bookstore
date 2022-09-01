@@ -1,6 +1,8 @@
 package com.onlinejava.project.bookstore;
 
+import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
@@ -13,10 +15,21 @@ public class Bookstore {
     {
         purchaseList = new ArrayList<>();
         bookList = new ArrayList<>();
-        bookList.add(new Book("홍길동전", "효선", 15000, "2층 15번" ));
-        bookList.add(new Book("토끼전", "지선", 20000, "1층 5번" ));
-        bookList.add(new Book("흥부전", "규선", 17500, "1층 3번" ));
-        bookList.add(new Book("JAVA의 정석", "남궁성", 22500, "1층 7번" ));
+
+        try {FileInputStream fis = new FileInputStream("booklist.dat");
+            InputStreamReader isr = new InputStreamReader(fis);
+            BufferedReader reader = new BufferedReader(isr);
+
+            reader.lines()
+                    .forEach(line -> {
+                                List<String> book = Arrays.stream(line.split(",")).map(String::trim).toList();
+                                bookList.add(new Book(book.get(0), book.get(1), Integer.parseInt(book.get(2)), book.get(3)));
+                            });
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void pagescreen() {
@@ -90,8 +103,6 @@ public class Bookstore {
             case "6":
                 printPurchaseList();
                 break;
-
-
             case"7":
                 break;
 
@@ -113,7 +124,7 @@ public class Bookstore {
 //        for(int i = 0; i < list.size(); i++){                           //아래가 함수형 프로그램으로 변환한 것
 //            if(list.get(i).getTitle().equals(purchaseBook)){
 //                list.get(i).setStock(list.get(i).getStock() - 1);
-//            }                                 // 음수가 나오지 않게 하기!
+//            }                                 // 음수가 나오지 않게 하기! 지금은 stock이 -가 나옴
 //        }
         getbookList().stream()
                 .filter(book -> book.getTitle().equals(purchaseBook))
