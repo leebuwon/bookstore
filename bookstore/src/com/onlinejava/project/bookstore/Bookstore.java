@@ -2,6 +2,7 @@ package com.onlinejava.project.bookstore;
 
 import org.w3c.dom.xpath.XPathResult;
 
+import java.awt.*;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,10 +14,13 @@ public class Bookstore {
 
     private List<Book> bookList;
     private List<Purchase> purchaseList;
+    private List<Member> MemberList;
 
     {
         purchaseList = new ArrayList<>();
         bookList = new ArrayList<>();
+        MemberList = new ArrayList<>();
+
 
         try {FileInputStream fis = new FileInputStream("booklist.dat");
             InputStreamReader isr = new InputStreamReader(fis);
@@ -27,9 +31,21 @@ public class Bookstore {
                                 List<String> book = Arrays.stream(line.split(",")).map(String::trim).toList();
                                 bookList.add(new Book(book.get(0), book.get(1), Integer.parseInt(book.get(2)), book.get(3)));
                             });
+
+            FileInputStream fis2 = new FileInputStream("memberlist.dat");
+            InputStreamReader isr2 = new InputStreamReader(fis2);
+            BufferedReader reader2 = new BufferedReader(isr2);
+
+            reader2.lines()
+                    .forEach(line -> {
+                        List<String> member = Arrays.stream(line.split(",")).map(String::trim).toList();
+                        MemberList.add(new Member(member.get(0), member.get(1), member.get(2)));
+                    });
+
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+
     }
 
     public void pagescreen() {
@@ -51,6 +67,7 @@ public class Bookstore {
         System.out.println("=           |    5. Buy a book           |          =");
         System.out.println("=           |    6. Print purchase list  |          =");
         System.out.println("=           |    7. Add book stock       |          =");
+        System.out.println("=           |    8. Print a Member List  |          =");
         System.out.println("=           |    0. Quit                 |          =");
         System.out.println("=           ------------------------------          =");
         System.out.println("=                                                   =");
@@ -112,12 +129,24 @@ public class Bookstore {
 
                 addBookStock(addTitle, addStock);
                 break;
+            case "8":
+                printMemberList();
+                break;
             case "0":
                 System.exit(0);
                 break;
             default:
                 System.out.println("Error : known " + input);
         }
+    }
+
+    private void printMemberList() {
+        getMemberList().forEach(member ->
+                System.out.println(member));
+    }
+
+    private List<Member> getMemberList() {
+        return MemberList;
     }
 
     private void addBookStock(String addTitle, int addStock) {
