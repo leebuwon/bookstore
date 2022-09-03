@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62c2dbff-7eb5-456e-ba0e-71cc7d0a1e5d" name="Changes" comment="booklist.dat Commit">
+    <list default="true" id="62c2dbff-7eb5-456e-ba0e-71cc7d0a1e5d" name="Changes" comment="add stock Commit">
+      <change afterPath="$PROJECT_DIR$/memberlist.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/onlinejava/project/bookstore/Member.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/onlinejava/project/bookstore/Bookstore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/onlinejava/project/bookstore/Bookstore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/onlinejava/project/bookstore/Purchase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/onlinejava/project/bookstore/Purchase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662037275829</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="add stock Commit">
+      <created>1662193179581</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1662193179581</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -249,7 +259,8 @@
     <MESSAGE value="search Commit" />
     <MESSAGE value="buy Commit" />
     <MESSAGE value="booklist.dat Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="booklist.dat Commit" />
+    <MESSAGE value="add stock Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="add stock Commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
