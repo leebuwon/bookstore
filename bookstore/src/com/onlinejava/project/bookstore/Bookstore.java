@@ -1,5 +1,7 @@
 package com.onlinejava.project.bookstore;
 
+import org.w3c.dom.xpath.XPathResult;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -25,9 +27,7 @@ public class Bookstore {
                                 List<String> book = Arrays.stream(line.split(",")).map(String::trim).toList();
                                 bookList.add(new Book(book.get(0), book.get(1), Integer.parseInt(book.get(2)), book.get(3)));
                             });
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
@@ -104,13 +104,29 @@ public class Bookstore {
                 printPurchaseList();
                 break;
             case"7":
-                break;
+                System.out.printf("Type title: ");
+                String addTitle = sc.nextLine().trim();
 
+                System.out.printf("Type stock: ");
+                int addStock = Integer.parseInt(sc.nextLine().trim());
+
+                addBookStock(addTitle, addStock);
+                break;
             case "0":
                 System.exit(0);
                 break;
             default:
                 System.out.println("Error : known " + input);
+        }
+    }
+
+    private void addBookStock(String addTitle, int addStock) {
+        List<Book> list = getbookList();
+        for (int i = 0; i < list.size(); i++){
+            if(list.get(i).getTitle().equals(addTitle)){
+                list.get(i).setStock(list.get(i).getStock() + addStock);
+                System.out.printf(addTitle + "의 재고를 " + addStock + "권 추가하였습니다.");
+            }
         }
     }
 
