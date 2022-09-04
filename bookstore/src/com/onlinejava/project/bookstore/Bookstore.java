@@ -149,11 +149,36 @@ public class Bookstore {
                 Member newMember = new Member(addUserName, addUserEmail, addUserPhoneNumber);
                 updateUser(newMember);
                 break;
+            case "10":
+                System.out.printf("Withdraw MemberName: ");
+                String withdrawUserName = sc.next().trim();
+
+                System.out.printf("Withdraw MemberEmail: ");
+                String withdrawEmail = sc.next().trim();
+
+                withdrawMember(withdrawUserName, withdrawEmail);
+                break;
             case "0":
                 System.exit(0);
                 break;
             default:
                 System.out.println("Error : known " + input);
+        }
+    }
+
+    private void withdrawMember(String withdrawUserName, String withdrawEmail) {
+        List<Member> list = getMemberList();
+        for (int i = 0; i < list.size(); i++){
+            if (list.get(i).getUserName().equals(withdrawUserName)){
+                if (list.get(i).getEmail().equals(withdrawEmail)){
+                    list.remove(i);
+                    System.out.println("success withdrawal ");
+                    return;
+                } else {
+                    System.out.println("fail withdrawal");
+                    return;
+                }
+            }
         }
     }
 
