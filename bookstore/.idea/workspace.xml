@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62c2dbff-7eb5-456e-ba0e-71cc7d0a1e5d" name="Changes" comment="memberlist Commit">
+      <change afterPath="$PROJECT_DIR$/bookstore.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memberlist.dat" beforeDir="false" afterPath="$PROJECT_DIR$/memberlist.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/onlinejava/project/bookstore/Bookstore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/onlinejava/project/bookstore/Bookstore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/onlinejava/project/bookstore/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/onlinejava/project/bookstore/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662197208420</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="memberlist Commit">
+      <created>1662201982884</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1662201982884</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -136,12 +136,29 @@ public class Bookstore {
             case "8":
                 printMemberList();
                 break;
+            case "9":
+                System.out.printf("User Name: ");
+                String addUserName = sc.nextLine().trim();
+
+                System.out.printf("User Email: ");
+                String addUserEmail = sc.next().trim();
+
+                System.out.printf("User PhoneNumber: ");
+                String addUserPhoneNumber = sc.next().trim();
+
+                Member newMember = new Member(addUserName, addUserEmail, addUserPhoneNumber);
+                updateUser(newMember);
+                break;
             case "0":
                 System.exit(0);
                 break;
             default:
                 System.out.println("Error : known " + input);
         }
+    }
+
+    private void updateUser(Member newMember) {
+        getMemberList().add(newMember);
     }
 
     private void printMemberList() {
